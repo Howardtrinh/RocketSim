@@ -3,11 +3,17 @@
     "configurePresets": [
         {
             "name": "vcpkg",
-            "generator": "Ninja",
+            "generator": "Visual Studio 18 2026",
             "binaryDir": "${sourceDir}/build",
+            "architecture": "x64",
             "cacheVariables":{
-            "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
+                "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake"
             }
+        },
+        {
+            "name": "debug",
+            "inherits":"vcpkg",
+            "binaryDir": "${sourceDir}/build/debug"
         }
     ]
 }

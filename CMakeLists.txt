@@ -5,4 +5,6 @@ set(CMAKE_CXX_STANDARD 23)
 
 find_package(fmt CONFIG REQUIRED)
 
-target_link_libraries(rocketsim PRIVATE fmt::fmt)
+add_executable(hello apps/hello.cpp)
+
+target_link_libraries(hello PRIVATE fmt::fmt)
