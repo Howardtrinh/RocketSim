@@ -1,0 +1,3 @@
+/Users/thehowardtrinh/RocketSim/build/CMakeFiles/hello.dir
+/Users/thehowardtrinh/RocketSim/build/CMakeFiles/edit_cache.dir
+/Users/thehowardtrinh/RocketSim/build/CMakeFiles/rebuild_cache.dir
