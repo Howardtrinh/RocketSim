@@ -1,0 +1,8 @@
+{
+  "cmake.configureArgs": [
+    "-DCMAKE_TOOLCHAIN_FILE=${workspaceFolder}/external/vcpkg/scripts/buildsystems/vcpkg.cmake",
+    "-DCMAKE_BUILD_TYPE=Debug",
+    "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+  ],
+  "cmake.exportCompileCommandsFile": true
+}
