@@ -16,3 +16,14 @@ target_include_directories(RocketSim PUBLIC ${PROJECT_SOURCE_DIR}/include)
 
 find_package(fmt CONFIG REQUIRED)
 target_link_libraries(RocketSim PRIVATE fmt::fmt)
+
+
+# --- Create GoogleTest target
+find_package(GTest CONFIG REQUIRED)
+
+add_executable(unit_tests
+    tests/test_sanity.cpp
+)
+
+target_include_directories(unit_tests PRIVATE ${PROJECT_SOURCE_DIR}/include)
+target_link_libraries(unit_tests PRIVATE GTest::gtest_main)
