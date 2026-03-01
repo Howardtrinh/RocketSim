@@ -1,16 +1,23 @@
 #pragma once
+#include <Eigen/Dense>
+#include <string>
 #include "project/exec/Integrator.h"
 #include "project/exec/ForwardEulerIntegrator.h"
-#include "memory"
 
 class Entity {
 public:
-    Entity(double mass, double position, double velocity, Integrator& integrator);
+    Entity(std::string name, Eigen::Vector3d states, Integrator& integrator);
+    virtual ~Entity() = default;
 
+    // Mutator
     void update(double dt);
+
+    // Accessor
+    const std::string& name() const;
+    virtual const Eigen::Vector3d& states() const;
+
 private:
-    double mass;
-    double position;
-    double velocity;
-    Integrator& integrator;
+    std::string m_name;
+    Eigen::Vector3d m_states;
+    Integrator& m_integrator;
 };

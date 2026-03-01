@@ -1,8 +1,8 @@
 #pragma once
-
+#include <Eigen/Dense>
 class Integrator {
     public:
         virtual ~Integrator() = default;
 
-        virtual void step(double& states, double dt, double derivatives) const = 0;
+        virtual void step(Eigen::Vector3d& states, const Eigen::Vector3d& derivatives, const double dt) const = 0;
 };

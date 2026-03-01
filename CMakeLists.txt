@@ -10,13 +10,16 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_executable(RocketSim
                src/main.cpp
                src/ForwardEulerIntegrator.cpp
-               src/Entity.cpp)
+               src/Entity.cpp
+               src/Rocket.cpp)
                
 target_include_directories(RocketSim PUBLIC ${PROJECT_SOURCE_DIR}/include)
 
 find_package(fmt CONFIG REQUIRED)
 target_link_libraries(RocketSim PRIVATE fmt::fmt)
 
+find_package(Eigen3 CONFIG REQUIRED)
+target_link_libraries(RocketSim PRIVATE Eigen3::Eigen)
 
 # --- Create GoogleTest target
 find_package(GTest CONFIG REQUIRED)
