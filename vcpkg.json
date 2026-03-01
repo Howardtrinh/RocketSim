@@ -4,6 +4,8 @@
     "dependencies": [
         "fmt",
         "gtest",
-        "eigen3"
+        "eigen3",
+        "raylib",
+        "glfw3"
     ]
 }
